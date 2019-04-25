@@ -1,0 +1,39 @@
+/* Styling the title text in the header */
+.title {
+    font-size: 42px;
+    line-height: 52px;
+    margin-block-end: 20px;
+    margin-block-start: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-size-adjust: 100%;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.cars {
+    max-height: 144px;
+    max-width: 258px;
+}
+p, h5 {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+}
+
+.red-header {
+    padding-bottom: 0px;
+    background-color: red;
+}
+
+#autoLogo {
+    max-width: 40vw;
+    min-height: 30px;
+    min-width: 300px;
+}
+
+.header {
+    border-bottom: 1px solid rgb(88, 87, 87);
+}
