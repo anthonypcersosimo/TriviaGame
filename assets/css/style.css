@@ -7,7 +7,7 @@
     margin-bottom: 20px;
     text-align: center;
     text-size-adjust: 100%;
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 20px;
 }
 
@@ -40,4 +40,15 @@ p, h5 {
 
 .quiz-body {
     background-color: rgb(181, 193, 218);
+}
+
+.quiz-questions {
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.quiz-img {
+    height: 125px;
+    width: 125px;
 }
