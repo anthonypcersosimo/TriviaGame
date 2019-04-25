@@ -37,3 +37,7 @@ p, h5 {
 .header {
     border-bottom: 1px solid rgb(88, 87, 87);
 }
+
+.quiz-body {
+    background-color: rgb(181, 193, 218);
+}
