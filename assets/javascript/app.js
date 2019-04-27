@@ -7,6 +7,7 @@ var answerKey = ["1b", "2d", "3c", "4a", "5c", "6a", "7b", "8d", "9d", "10a", "1
 window.onload = function() {
   // Hide the Quiz Body on the page load
   $(".quiz-body").hide();
+  $("#hideResults").hide();
 
   // Evaluate the score on a click of and radio button
   $("input[type='radio']").on("click", function () {
@@ -29,9 +30,17 @@ window.onload = function() {
     console.log(answerWrong);
   });
 
+   // Events to execute on begin quiz button
+   $("#finish").on("click", function(){
+    $("#hideResults").show();
+    $(".quiz-body").hide();
+    $("#answered-correct").text("Correct: " + answerCorrect);
+    $("#answered-incorrect").text("Incorrect: " + answerWrong);
+  });
+
   // Events to execute on begin quiz button
   $("#start").on("click", function(){
-    // start();
+    start();
     $("#display").text("12 Minutes");
     $(".quiz-body").show();
   });
