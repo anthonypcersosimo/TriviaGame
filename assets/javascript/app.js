@@ -3,22 +3,26 @@ var answerWrong = 12 - answerCorrect;
 
 
 window.onload = function() {
-    $("#display").text("15 Minutes");
-    $("#start").on("click", start);
-  };
+  $(".quiz-body").hide();
+  $("#start").on("click", start);
+  $("#start").on("click", function(){
+    $("#display").text("12 Minutes");
+    $(".quiz-body").show();
+  });
+};
 
   // Start Timer
   var intervalId;
   
   var clockRunning = false;
-  var time = 900;
+  var time = 720;
   
   function reset() {
   
-    time = 900;
+    time = 720;
 
   
-    $("#display").text("15:00");
+    $("#display").text("12:00");
   }
   function start() {
     

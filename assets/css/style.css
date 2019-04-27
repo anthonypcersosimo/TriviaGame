@@ -41,6 +41,7 @@ p, h5, h1 {
 
 .quiz-body {
     background-color: rgb(181, 193, 218);
+    margin-bottom: 300px;
 }
 
 .quiz-questions {
