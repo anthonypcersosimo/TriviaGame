@@ -52,3 +52,32 @@ p, h5 {
     height: 125px;
     width: 125px;
 }
+
+.buttonDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar {
+    display: none; 
+}
+
+#timeDisplay {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    height: 50px;
+    width: 200px;
+    border-width: 3px;
+    border-style: groove;
+    border-color: rgb(138, 138, 255);
+    background-color: black
+}
+
+#display {
+    font-size: 28pt;
+   
+    text-align: center;
+    color: lawngreen;
+}

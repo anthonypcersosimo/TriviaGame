@@ -1,26 +1,22 @@
+var answerCorrect = 0;
+var answerWrong = 12 - answerCorrect;
 
 
 window.onload = function() {
-    $("#lap").on("click", recordLap);
-    $("#stop").on("click", stop);
-    $("#reset").on("click", reset);
     $("#start").on("click", start);
   };
-  
+
   var intervalId;
   
   var clockRunning = false;
   var time = 0;
-  var lap = 1;
   
   function reset() {
   
-    time = 0;
-    lap = 1;
+    time = 900;
+
   
-    $("#display").text("00:00");
-  
-    $("#laps").text("");
+    $("#display").text("15:00");
   }
   function start() {
   
@@ -34,17 +30,10 @@ window.onload = function() {
     clearInterval(intervalId);
     clockRunning = false;
   }
-  function recordLap() {
   
-    var converted = timeConverter(time);
-  
-    $("#laps").append("<p>Lap " + lap + " : " + converted + "</p>");
-  
-    lap++;
-  }
   function count() {
   
-    time++;
+    time--;
   
     var converted = timeConverter(time);
     console.log(converted);
