@@ -2,20 +2,27 @@ var answerCorrect = 0;
 var answerWrong = 12 - answerCorrect;
 
 //Array of correct answers :)
-var answerKey = ["q1b", "q2d", "q3c", "q4a", "q5c", "q6a", "q7b", "q8d", "q9d", "q10a", "q11a", "q12b"];
+var answerKey = ["1b", "2d", "3c", "4a", "5c", "6a", "7b", "8d", "9d", "10a", "11a", "12b"];
 
 window.onload = function() {
   // Hide the Quiz Body on the page load
   $(".quiz-body").hide();
 
-  // Evaluate the score for 
-  
-  $("input[name='q1']").on("click", function () {
-    var selectedKey = $('input[name="q1"]:checked').val();
-    var selectedKeyValue = 1 + $.inArray("q1" + selectedKey, answerKey);
-    if (selectedKeyValue === 1) {
+  // Evaluate the score on a click of and radio button
+  $("input[type='radio']").on("click", function () {
+    var selectedKey = $(this).val();
+    // console.log(selectedKey);
+    // console.log(this);
+    var selectedQuestion = $(this).attr("name");
+    // console.log(selectedQuestion);
+    var selectedKeyValue = $.inArray(selectedQuestion + selectedKey, answerKey) + 1;
+    // console.log(selectedKeyValue);
+    if (selectedKeyValue > 0) {
       answerCorrect = answerCorrect + 1;
       answerWrong = 12 - answerCorrect;
+      selectedKey = "";
+      selectedQuestion = "";
+      selectedKeyValue = 0;
     };
 
     console.log(answerCorrect);
@@ -24,7 +31,7 @@ window.onload = function() {
 
   // Events to execute on begin quiz button
   $("#start").on("click", function(){
-    start();
+    // start();
     $("#display").text("12 Minutes");
     $(".quiz-body").show();
   });
