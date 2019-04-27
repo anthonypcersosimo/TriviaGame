@@ -4,8 +4,8 @@ var answerWrong = 12 - answerCorrect;
 
 window.onload = function() {
   $(".quiz-body").hide();
-  $("#start").on("click", start);
   $("#start").on("click", function(){
+    start();
     $("#display").text("12 Minutes");
     $(".quiz-body").show();
   });
