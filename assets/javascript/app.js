@@ -3,13 +3,15 @@ var answerWrong = 12 - answerCorrect;
 
 
 window.onload = function() {
+    $("#display").text("15 Minutes");
     $("#start").on("click", start);
   };
 
+  // Start Timer
   var intervalId;
   
   var clockRunning = false;
-  var time = 0;
+  var time = 900;
   
   function reset() {
   
@@ -19,7 +21,7 @@ window.onload = function() {
     $("#display").text("15:00");
   }
   function start() {
-  
+    
     if (!clockRunning) {
       intervalId = setInterval(count, 1000);
       clockRunning = true;
@@ -53,8 +55,9 @@ window.onload = function() {
       minutes = "00";
     }
     else if (minutes < 10) {
-      minutes = "0" + minutes;
+      minutes = "00" + minutes;
     }
   
     return minutes + ":" + seconds;
   }
+  // End Timer

@@ -15,12 +15,13 @@
     max-height: 144px;
     max-width: 258px;
 }
-p, h5 {
+p, h5, h1 {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 300;
     text-align: center;
     font-style: italic;
+    padding: 15px;
 }
 
 .red-header {
@@ -67,17 +68,17 @@ p, h5 {
     right: 0;
     bottom: 0;
     margin: 20px;
-    height: 50px;
-    width: 200px;
+    height: 60px;
+    width: 225px;
     border-width: 3px;
     border-style: groove;
-    border-color: rgb(138, 138, 255);
-    background-color: black
+    border-color: rgb(229, 229, 252);
+    background-color: rgb(181, 193, 218);
 }
 
 #display {
     font-size: 28pt;
-   
     text-align: center;
-    color: lawngreen;
+    color: black;
+    font-weight: bolder;
 }
