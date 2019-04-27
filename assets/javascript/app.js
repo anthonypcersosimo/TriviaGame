@@ -2,13 +2,25 @@ var answerCorrect = 0;
 var answerWrong = 12 - answerCorrect;
 
 //Array of correct answers :)
-var answerKey = ["q1b", "q2d", "q3c", "q4a", "q5c", "q6a", "q7b", "q8d", "q9d", "q10a", "q11a", "q12b"]
+var answerKey = ["q1b", "q2d", "q3c", "q4a", "q5c", "q6a", "q7b", "q8d", "q9d", "q10a", "q11a", "q12b"];
 
 window.onload = function() {
   // Hide the Quiz Body on the page load
   $(".quiz-body").hide();
 
-  // Evaluate 
+  // Evaluate the score for 
+  
+  $("input[name='q1']").on("click", function () {
+    var selectedKey = $('input[name="q1"]:checked').val();
+    var selectedKeyValue = 1 + $.inArray("q1" + selectedKey, answerKey);
+    if (selectedKeyValue === 1) {
+      answerCorrect = answerCorrect + 1;
+      answerWrong = 12 - answerCorrect;
+    };
+
+    console.log(answerCorrect);
+    console.log(answerWrong);
+  });
 
   // Events to execute on begin quiz button
   $("#start").on("click", function(){
